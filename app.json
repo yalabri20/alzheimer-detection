@@ -4,15 +4,30 @@
     "slug": "alzheimer-detection",
     "version": "1.0.0",
     "orientation": "portrait",
+    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
-      "supportsTabletOnly": false
+      "supportsTabletOnly": false,
+      "bundleIdentifier": "com.yousef604.alzheimerdetection"
     },
     "android": {
-      "package": "com.yousef604.alzheimerdetection"
+      "package": "com.yousef604.alzheimerdetection",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
