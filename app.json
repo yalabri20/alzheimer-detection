@@ -3,17 +3,17 @@
     "name": "Alzheimer Detection",
     "slug": "alzheimer-detection",
     "version": "1.0.0",
+    "package": "com.yousef604.alzheimerdetection",
+    "android": {
+      "package": "com.yousef604.alzheimerdetection",
+      "versionCode": 1
+    },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
-      "supportsTabletOnly": false
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+      "supportsTabletOnly": false,
+      "bundleIdentifier": "com.yousef604.alzheimerdetection"
     }
   }
 }
