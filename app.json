@@ -1,19 +1,11 @@
 {
   "expo": {
     "name": "Alzheimer Detection",
-    "slug": "alzheimer-detection",
+    "slug": "alzheimer-mri-detection",
     "version": "1.0.0",
-    "package": "com.yousef604.alzheimerdetection",
+    
     "android": {
-      "package": "com.yousef604.alzheimerdetection",
-      "versionCode": 1
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTabletOnly": false,
-      "bundleIdentifier": "com.yousef604.alzheimerdetection"
+      "package": "com.yousef20.alzheimerdetection"
     }
   }
 }
