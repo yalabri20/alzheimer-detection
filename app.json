@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "name": "Alzheimer Detection",
+    "slug": "alzheimer-detection",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTabletOnly": false
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    }
+  }
+}
