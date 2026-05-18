@@ -40,7 +40,7 @@ export default function App() {
     setLoading(true);
     try {
       const response = await axios.post(
-        'https://YOURUSERNAME-alzheimer-mri-detection.hf.space/api/predict/',
+        'https://yousef20-alzheimer-mri-detection.hf.space/api/predict/',
         { data: [image] }
       );
       setPredictions(response.data.data[0]);
