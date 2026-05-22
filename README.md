@@ -62,11 +62,11 @@ This project uses two MRI datasets:
 
 ### 🖥️ Application Interface
 
-![Demo](results/demo.png)
+![Demo](Results/demo.png)
 
 ### 📊 Example Prediction
 
-![Result](results/result.png)
+![Result](Results/result.png)
 
 > Note: The model file is not included due to size limitations. The demo images above show real predictions from the trained model.
 
