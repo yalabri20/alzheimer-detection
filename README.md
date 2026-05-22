@@ -2,9 +2,10 @@
 
 ## 📌 Overview
 
-Early detection of Alzheimer’s Disease (AD) is critical for improving patient outcomes. This project presents a deep learning–based system that classifies brain MRI scans into four stages of Alzheimer’s progression.
+Early detection of Alzheimer’s Disease (AD) is critical for improving patient outcomes.
+This project presents a deep learning–based system that classifies brain MRI scans into four stages of Alzheimer’s progression.
 
-The goal is not only to achieve high accuracy, but also to build a scalable and reproducible AI pipeline suitable for real-world medical applications.
+The system was initially developed using Jupyter Notebooks and later refactored into modular Python scripts with a simple deployment interface using Gradio.
 
 ---
 
@@ -12,12 +13,8 @@ The goal is not only to achieve high accuracy, but also to build a scalable and 
 
 This project uses two MRI datasets:
 
-* **Kaggle Dataset**
-
-  * 33,984 MRI images
-* **Mendeley Dataset**
-
-  * 6,400 MRI images (T1-weighted)
+* **Kaggle Dataset** (~33,984 images)
+* **Mendeley Dataset** (~6,400 images, T1-weighted MRI)
 
 ### Classes:
 
@@ -26,7 +23,7 @@ This project uses two MRI datasets:
 * Mild Demented
 * Moderate Demented
 
-> The datasets were balanced and combined to improve generalization and reduce bias.
+> The datasets were combined and balanced to improve generalization and reduce bias.
 
 ---
 
@@ -35,34 +32,43 @@ This project uses two MRI datasets:
 ### 🔹 Preprocessing
 
 * Resize images to 224x224
-* Convert grayscale MRI → RGB (for pretrained models)
+* Convert grayscale MRI → RGB
 * Normalize using ImageNet statistics
 
 ### 🔹 Models Used
 
-* Simple MLP (baseline)
-* ResNet-18 (transfer learning)
-* EfficientNet-B0 ✅ (best performance)
+* MLP (baseline)
+* ResNet-18
+* EfficientNet-B0 ⭐ (best performing model)
 
 ### 🔹 Pipeline
 
-1. Data Loading
-2. Preprocessing & Augmentation
-3. Model Training
-4. Evaluation
-5. Deployment (basic interface)
+1. Data preprocessing
+2. Model training
+3. Evaluation
+4. Deployment using Gradio
 
 ---
 
-## 📊 Results
+## 🧠 Model
 
-| Model           | Performance |
-| --------------- | ----------- |
-| MLP             | Baseline    |
-| ResNet-18       | Improved    |
-| EfficientNet-B0 | ⭐ Best      |
+* Architecture: EfficientNet-B0
+* Framework: PyTorch
+* Output: 4-class classification
 
-> Final model achieved strong classification performance across all 4 Alzheimer stages.
+---
+
+## 🚀 Demo
+
+### 🖥️ Application Interface
+
+![Demo](results/demo.png)
+
+### 📊 Example Prediction
+
+![Result](results/result.png)
+
+> Note: The model file is not included due to size limitations. The demo images above show real predictions from the trained model.
 
 ---
 
@@ -73,61 +79,63 @@ This project uses two MRI datasets:
 * Torchvision
 * NumPy
 * OpenCV
-
----
-
-## 🚀 How to Run
-
-```bash
-pip install -r requirements.txt
-python train.py
-```
+* Gradio
 
 ---
 
 ## 📁 Project Structure
 
 ```
-Alzheimer-AI-Detection/
+Alzheimer-AI/
 │
-├── README.md
-├── requirements.txt
 ├── notebooks/
+│   ├── training.ipynb
+│   ├── deployment.ipynb
+│
+├── model/
+│   └── model.pth   (not included)
+│
 ├── src/
+│   ├── train.py
+│   ├── predict.py
+│
+├── app.py
 ├── results/
-└── demo/
+│   ├── demo.png
+│   ├── result.png
+│
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
-## ⚠️ Note
+## ▶️ How to Run
 
-Due to dataset size, data is not included in this repository.
-
-You can access it here:
-
-* Kaggle: (add your link)
-* Mendeley: (add your link)
+```bash
+pip install -r requirements.txt
+python app.py
+```
 
 ---
 
 ## 💡 Key Highlights
 
-* Multi-dataset integration (improves robustness)
+* Multi-dataset integration
 * Model comparison (MLP vs CNN vs EfficientNet)
-* Medical imaging pipeline design
-* Scalable and reproducible workflow
+* Medical imaging pipeline
+* Deployment-ready AI application
 
 ---
 
 ## 🎯 Future Work
 
-* Deploy as a web application
-* Improve model explainability (Grad-CAM)
-* Integrate with clinical systems
+* Deploy as a web application (cloud)
+* Add explainability (Grad-CAM)
+* Improve model performance with larger datasets
 
 ---
 
 ## 👨‍💻 Author
 
-AI Engineer passionate about building real-world AI systems combining research and production-level solutions.
+AI Engineer focused on building real-world AI solutions combining research and production-level systems.
