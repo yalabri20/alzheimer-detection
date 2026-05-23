@@ -60,6 +60,10 @@ This project uses two MRI datasets:
 
 ## 🚀 Demo
 
+### 🌐 Live Web Application
+You can interact with the live deployed model directly on Hugging Face Spaces:
+👉 **[Alzheimer MRI Detection Live Space](https://huggingface.co/spaces/Yousef20/alzheimer-mri-detection)**
+
 ### 🖥️ Application Interface
 
 ![Demo](Results/demo.png)
